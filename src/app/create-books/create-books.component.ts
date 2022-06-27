@@ -20,30 +20,35 @@ export class CreateBooksComponent implements OnInit {
   }
   saveBook(){
     this.bookService.createBooks(this.book).subscribe( data =>{
-      console.log(data);
+      this._snackBar.open("BooK created Successfully", "OK", {
+        duration: 3000,
+        horizontalPosition:'center' ,
+         verticalPosition: 'top',
+        panelClass: ['green-snackbar'],
+       });
       this.goToBooksList();
     },
       (    error: any) => console.log(error));
   }
 
   goToBooksList(){
-    this.router.navigate(['/book']);
+    this.router.navigate(['books'])  //navigated to particular path
   }
 
-  onSubmit(){this.bookService.createBooks(this.book).subscribe( (data) =>{
-    this._snackBar.open("BooK created Successfully", "OK", {
-      duration: 3000,
-      horizontalPosition:'center' ,
-       verticalPosition: 'top',
-      panelClass: ['green-snackbar'],
-     });
-     console.log(data);
-     this.router.navigate(['books'])  //navigated to particular path
-    }
-    , (error:any) => console.log(error));
+  // onSubmit(){this.bookService.createBooks(this.book).subscribe( (data) =>{
+  //   this._snackBar.open("BooK created Successfully", "OK", {
+  //     duration: 3000,
+  //     horizontalPosition:'center' ,
+  //      verticalPosition: 'top',
+  //     panelClass: ['green-snackbar'],
+  //    });
+  //    console.log(data);
+  //  //  this.saveBook();
 
-    console.log(this.book);
-    this.saveBook();
-  }
+    // }
+    // , (error:any) => console.log(error));
+
+    // this.saveBook();
+  // }
 
 }
