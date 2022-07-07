@@ -1,0 +1,8 @@
+com\cltech_hrms\hrms\response\CommonResponse$CommonResponseBuilder.class
+com\cltech_hrms\hrms\controller\EmployeeDetailsController.class
+com\cltech_hrms\hrms\serviceimpl\EmployeeDetailServiceImpl.class
+com\cltech_hrms\hrms\response\CommonResponse.class
+com\cltech_hrms\hrms\HrmsApplication.class
+com\cltech_hrms\hrms\service\EmployeeDetailService.class
+com\cltech_hrms\hrms\model\EmployeeDetailsModel.class
+com\cltech_hrms\hrms\repository\EmployeeDetailRepo.class

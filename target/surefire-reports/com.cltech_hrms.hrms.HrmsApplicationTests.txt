@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cltech_hrms.hrms.HrmsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.857 s - in com.cltech_hrms.hrms.HrmsApplicationTests
