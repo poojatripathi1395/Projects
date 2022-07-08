@@ -44,11 +44,11 @@ public class EmployeeDetailsController {
     @GetMapping (value ="/employees/{employeeId}")
     public CommonResponse getEmployee(@PathVariable("employeeId") int employeeDetailId)
     {
-System.out.println("Employee detail id  : "+employeeDetailId);
+    System.out.println("Employee detail id  : "+employeeDetailId);
 
-try{
+    try{
     EmployeeDetailsModel theEmployee = employeeDetailService.findById(employeeDetailId);
-System.out.println("the employee = "+theEmployee);
+    System.out.println("the employee = "+theEmployee);
     if (theEmployee != null) {
         response.setStatus(SSLEngineResult.Status.OK);
         response.setMessage("successful");
@@ -58,7 +58,7 @@ System.out.println("the employee = "+theEmployee);
         response.setMessage("Record not found");
         response.setResponse(null);
     }
-}catch(Exception e){
+    }catch(Exception e){
     response.setStatus(SSLEngineResult.Status.BUFFER_UNDERFLOW);
     response.setMessage("Provide valid id");
     response.setResponse(null);
