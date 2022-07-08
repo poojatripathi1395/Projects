@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -35,13 +37,21 @@ public class EmployeeDetailsModel {
     
     @Column
     String contactNo;
-    
+
+//    public List<AddressModel> getAddress() {
+//        return address;
+//    }
+
+//    public void setAddress(List<AddressModel> address) {
+//        this.address = address;
+//    }
+
     @Column
     String DOB;  // Date DOB;
     
     
     @Column
     String alternateConatactNo;
-    //    List<Address> address;  // Address address;
+//        List<AddressModel> address;  // Address address;
     long fk_employee_id;
 }
